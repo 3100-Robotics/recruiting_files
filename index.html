@@ -11,6 +11,22 @@ date, edit the links between the quotes on the appropriate line.
 <html>
 <head>
     <title> 3100 Recruiting portal </title>
+
+    <script>
+        function main() {
+            const url_form = "https://3100-robotics.github.io/recruiting_files/form_link.txt";
+            fetch(url_form)
+                .then( r => r.text() )
+                .then( t => document.getElementById("form").innerHTML = t)
+
+            const url_calender = "https://3100-robotics.github.io/recruiting_files/calender_link.txt";
+            fetch(url_calender)
+                .then( r => r.text() )
+                .then( t => document.getElementById("calender").innerHTML = t)
+
+        }
+    </script>
+    
 </head>
 
 <body>
@@ -24,9 +40,13 @@ date, edit the links between the quotes on the appropriate line.
 
     
 <p>These links were updated on 9/9/2025.</p>
+
+<p id="calender"> The current link data at https://3100-robotics.github.io/recruiting_files/calender_link.txt for the calender data is </p> <br/>
+<p id="form"> The current link data at https://3100-robotics.github.io/recruiting_files/form_link.txt for the form is </p>
+
 <a href="https://3100-robotics.github.io/recruiting_files/current_year_dates.ics"> current_year_dates.ics: Direct calender link </a> <br/>
 <a href="https://3100-robotics.github.io/recruiting_files/calender_dates_redirect.html"> calender_dates_redirect.html: Should redirect to current_year_dates.ics </a> <br/>
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSfKvObx3dCe2UDlhcK9OAdNX-4hNmOiECD2uIRJ-2EWAVf5qg/viewform?usp=dialog">Optionaly fill out interest survey</a>
+<a href="https://3100-robotics.github.io/recruiting_files/form_redirect.html">Optionaly fill out interest survey</a>
 
     
 </body>
