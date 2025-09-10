@@ -51,19 +51,19 @@ date, edit the links between the quotes on the appropriate line.
 
 
 
-        footer {
+        .footer {
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
     background-color: rgb(38, 187, 33);
-    color: white;
+    color: rgb(0, 0, 0);
     text-align: center;
 }
 
         h1 {
             font-family: 'Roboto', sans-serif;
-        font-weight: 700; /* For bold headings */
+            font-weight: 700;
         }
 
         body {
@@ -81,6 +81,7 @@ date, edit the links between the quotes on the appropriate line.
         height: 100vh; /* Ensures the body takes up the full viewport height */
         margin: 0; /* Removes default body margin */
         padding: 0; /* Removes default body padding */
+        background-position: right top;
 }
 
     .visible {
@@ -114,39 +115,36 @@ date, edit the links between the quotes on the appropriate line.
 </ol>
 
 <fieldset>
-        <legend><h3>This is probably what you are looking for</h3></legend>
-        <div style="text-align: center;">
-            <p> You probably are here because you want the links that you give to people for either the calender or the interest form. 
-                (if you're not here for that you know why) <br/>
+    <legend><h3>This is probably what you are looking for</h3></legend>
+    <div>
+        <p> You probably are here because you want the links that you give to people for either the calender or the interest form.  <br/>
 
-                Those can be copied from <a class="visible" href="https://3100-robotics.github.io/recruiting_files/calender_dates_redirect.html"> here, the calender link </a> 
-                and <a class="visible" href="https://3100-robotics.github.io/recruiting_files/form_redirect.html">here, the interest survey</a>
-            </p>
-        </div>
-    </fieldset>
+            Those can be copied from <a class="visible" href="https://3100-robotics.github.io/recruiting_files/calender_dates_redirect.html"> here, the calender link </a> 
+            and <a class="visible" href="https://3100-robotics.github.io/recruiting_files/form_redirect.html">here, the interest survey</a>
+        </p>
+    </div>
+</fieldset>
 
 <br/>
 
-<h4> both of the *_redirect.html files' real links are prefixed with https://3100-robotics.github.io/recruiting_files/ </h4>
-<p class="ilb">The calender_dates_redirect.html currently points to </p> <p class="ilb" class="visible" id="calender"></p> <br/>
-<p class="ilb">The form_redirect.html currently points to </p> <p class="ilb" class="visible" id="form"></p>
+<h4> Both of the *_redirect.html files' real links are prefixed with https://3100-robotics.github.io/recruiting_files/ </h4>
+<p class="ilb">The calender_dates_redirect.html currently points to </p> <p class="ilb visible" id="calender"></p> <br/>
+<p class="ilb">The form_redirect.html currently points to </p> <p class="ilb visible" id="form"></p>
 
 <br/>
 
 <a class="visible" href="https://3100-robotics.github.io/recruiting_files/current_year_dates.ics"> current_year_dates.ics: Direct calender data link. 
     <b> This probably is not what you are looking for, see above</b></a> <br/>
 
-<!-- <a class="visible" href="https://3100-robotics.github.io/recruiting_files/calender_dates_redirect.html"> calender_dates_redirect.html: Should redirect to current_year_dates.ics </a> <br/>
-<a class="visible" href="https://3100-robotics.github.io/recruiting_files/form_redirect.html">Interest survey</a> -->
-
-<br/><br/>
+<br/>
+<br/>
 
 <details>
   <summary class="fairy">Click to expand rationale diagram</summary>
   <object data="https://3100-robotics.github.io/recruiting_files/diagram.svg" type="image/svg+xml"></object>
 </details>
 
-    <footer><p>This page was last updated on 9/10/2025.</p></footer>
+    <h2><b class="footer">This page was last updated on 9/10/2025.</b></h2>
 </body>
 
 </html>
