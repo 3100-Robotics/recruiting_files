@@ -21,17 +21,46 @@ date, edit the links between the quotes on the appropriate line.
             const url_form = "https://3100-robotics.github.io/recruiting_files/form_link.txt";
             fetch(url_form)
                 .then( r => r.text() )
-                .then( t => document.getElementById("form").innerHTML = t)
+                .then( t => {document.getElementById("form").innerHTML += t; console.log(t);})
 
             const url_calender = "https://3100-robotics.github.io/recruiting_files/calender_link.txt";
             fetch(url_calender)
                 .then( r => r.text() )
-                .then( t => document.getElementById("calender").innerHTML = t)
+                .then( t => document.getElementById("calender").innerHTML += t)
 
         }
     </script>
 
     <style>
+        fieldset {
+            border: 2px solid #339938; /* Adjust border color and thickness */
+            padding: 15px; /* Adjust padding inside the box */
+            margin: 20px; /* Adjust margin around the box */
+            border-radius: 8px; /* Optional: adds rounded corners */
+        }
+
+        legend {
+            font-weight: bold;
+            color: #339941; /* Adjust title color */
+            padding: 0 10px; /* Adjust padding around the title text */
+            background-color: #f0f8ff; /* Optional: background color for the title */
+            border: 1px solid #3b9933; /* Optional: border around the title */
+            border-radius: 4px; /* Optional: rounded corners for the title border */
+        }
+
+
+
+
+        footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(38, 187, 33);
+    color: white;
+    text-align: center;
+}
+
         h1 {
             font-family: 'Roboto', sans-serif;
         font-weight: 700; /* For bold headings */
@@ -42,43 +71,82 @@ date, edit the links between the quotes on the appropriate line.
         }
 
     html {
-  background-image: url('https://3100-robotics.github.io/recruiting_files/logo.svg');
-  background-size: cover; /* or contain, 100%, etc. */
-  background-repeat: no-repeat;
+        background-image: url('https://3100-robotics.github.io/recruiting_files/logo.svg');
         color: white;
-        background-size: contain;
         background-color: black;
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed; /* Optional: keeps background fixed during scroll */
+        height: 100vh; /* Ensures the body takes up the full viewport height */
+        margin: 0; /* Removes default body margin */
+        padding: 0; /* Removes default body padding */
 }
 
     .visible {
         background-color: white;
+        color: black;
+    }
+
+    .ilb {
+        display: inline-block;
+    }
+
+
+    .fairy {
+        font-size:x-large;
+        background-color: #339941;
+        border-radius: 10px;
+        padding: 2px;
     }
 
         </style>
     
 </head>
 
-<body>
+<body onload="main();">
 
-<h1> 3100 Recruiting Portal </h1>
-<p> Hi! This is a dummy index page for the 3100 recruiting portal. It's purpose is to: </p> 
+<h1 style="text-align: center;"> 3100 Recruiting Portal </h1>
+<p> <p class="ilb fairy"> Hello Turtle! </p> This is a status page for the our recruiting portal. It's purpose is to: </p> 
 <ol>
     <li> One day link to our actual website. </li>
     <li> (Right now) provide links for debugging and make sure verything is fine </li>
 </ol>
 
-<!-- <object data="https://3100-robotics.github.io/recruiting_files/logo.svg" type="image/svg+xml"></object> -->
-    
-<p>This page was updated on 9/9/2025.</p>
+<fieldset>
+        <legend><h3>This is probably what you are looking for</h3></legend>
+        <div style="text-align: center;">
+            <p> You probably are here because you want the links that you give to people for either the calender or the interest form. 
+                (if you're not here for that you know why) <br/>
 
-<p id="calender"> The current link data at https://3100-robotics.github.io/recruiting_files/calender_link.txt for the calender data is </p>
-<p id="form"> The current link data at https://3100-robotics.github.io/recruiting_files/form_link.txt for the form is </p>
+                Those can be copied from <a class="visible" href="https://3100-robotics.github.io/recruiting_files/calender_dates_redirect.html"> here, the calender link </a> 
+                and <a class="visible" href="https://3100-robotics.github.io/recruiting_files/form_redirect.html">here, the interest survey</a>
+            </p>
+        </div>
+    </fieldset>
 
-<a class="visible" href="https://3100-robotics.github.io/recruiting_files/current_year_dates.ics"> current_year_dates.ics: Direct calender link </a> <br/>
-<a class="visible" href="https://3100-robotics.github.io/recruiting_files/calender_dates_redirect.html"> calender_dates_redirect.html: Should redirect to current_year_dates.ics </a> <br/>
-<a class="visible" href="https://3100-robotics.github.io/recruiting_files/form_redirect.html">Interest survey</a>
+<br/>
 
-    
+<h4> both of the *_redirect.html files' real links are prefixed with https://3100-robotics.github.io/recruiting_files/ </h4>
+<p class="ilb">The calender_dates_redirect.html currently points to </p> <p class="ilb" class="visible" id="calender"></p> <br/>
+<p class="ilb">The form_redirect.html currently points to </p> <p class="ilb" class="visible" id="form"></p>
+
+<br/>
+
+<a class="visible" href="https://3100-robotics.github.io/recruiting_files/current_year_dates.ics"> current_year_dates.ics: Direct calender data link. 
+    <b> This probably is not what you are looking for, see above</b></a> <br/>
+
+<!-- <a class="visible" href="https://3100-robotics.github.io/recruiting_files/calender_dates_redirect.html"> calender_dates_redirect.html: Should redirect to current_year_dates.ics </a> <br/>
+<a class="visible" href="https://3100-robotics.github.io/recruiting_files/form_redirect.html">Interest survey</a> -->
+
+<br/><br/>
+
+<details>
+  <summary class="fairy">Click to expand rationale diagram</summary>
+  <object data="https://3100-robotics.github.io/recruiting_files/diagram.svg" type="image/svg+xml"></object>
+</details>
+
+    <footer><p>This page was last updated on 9/10/2025.</p></footer>
 </body>
 
 </html>
