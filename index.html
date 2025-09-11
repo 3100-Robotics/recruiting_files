@@ -1,0 +1,150 @@
+<!-- 
+
+WARNING if you are editing this file because its a new year, you probably do not need to update this file. If your already this far you probably know HTML. 
+If not try to find someone who does
+
+If you edit this file, please update the datestamp and all references to times and links to forms. If you dont know html just change the 
+date, edit the links between the quotes on the appropriate line.
+
+-->
+
+<html>
+<head>
+    <title> 3100 Recruiting portal </title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <script>
+        function main() {
+            const url_form = "https://3100-robotics.github.io/recruiting_files/form_link.txt";
+            fetch(url_form)
+                .then( r => r.text() )
+                .then( t => {document.getElementById("form").innerHTML += t; console.log(t);})
+
+            const url_calender = "https://3100-robotics.github.io/recruiting_files/calender_link.txt";
+            fetch(url_calender)
+                .then( r => r.text() )
+                .then( t => document.getElementById("calender").innerHTML += t)
+
+        }
+    </script>
+
+    <style>
+        fieldset {
+            border: 2px solid #339938; /* Adjust border color and thickness */
+            padding: 15px; /* Adjust padding inside the box */
+            margin: 20px; /* Adjust margin around the box */
+            border-radius: 8px; /* Optional: adds rounded corners */
+        }
+
+        legend {
+            font-weight: bold;
+            color: #339941; /* Adjust title color */
+            padding: 0 10px; /* Adjust padding around the title text */
+            background-color: #f0f8ff; /* Optional: background color for the title */
+            border: 1px solid #3b9933; /* Optional: border around the title */
+            border-radius: 4px; /* Optional: rounded corners for the title border */
+        }
+
+
+
+
+        .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(38, 187, 33);
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+        h1 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+    html {
+        background-image: url('https://3100-robotics.github.io/recruiting_files/logo.svg');
+        color: white;
+        background-color: black;
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed; /* Optional: keeps background fixed during scroll */
+        height: 100vh; /* Ensures the body takes up the full viewport height */
+        margin: 0; /* Removes default body margin */
+        padding: 0; /* Removes default body padding */
+        background-position: right top;
+}
+
+    .visible {
+        background-color: white;
+        color: black;
+    }
+
+    .ilb {
+        display: inline-block;
+    }
+
+
+    .fairy {
+        font-size:x-large;
+        background-color: #339941;
+        border-radius: 10px;
+        padding: 2px;
+    }
+
+        </style>
+    
+</head>
+
+<body onload="main();">
+
+<h1 style="text-align: center;"> 3100 Recruiting Portal </h1>
+<p> <p class="ilb fairy"> Hello Turtle! </p> This is a status page for the our recruiting portal. It's purpose is to: </p> 
+<ol>
+    <li> One day link to our actual website. </li>
+    <li> (Right now) provide links for debugging and make sure verything is fine </li>
+</ol>
+
+<fieldset>
+    <legend><h3>This is probably what you are looking for</h3></legend>
+    <div>
+        <p> You probably are here because you want the links that you give to people for either the calender or the interest form.  <br/>
+
+            Those can be copied from <a class="visible" href="https://3100-robotics.github.io/recruiting_files/calender_dates_redirect.html"> here, the calender link </a> 
+            and <a class="visible" href="https://3100-robotics.github.io/recruiting_files/form_redirect.html">here, the interest survey</a>
+        </p>
+    </div>
+</fieldset>
+
+<br/>
+
+<h4> Both of the *_redirect.html files' real links are prefixed with https://3100-robotics.github.io/recruiting_files/ </h4>
+<p class="ilb">The calender_dates_redirect.html currently points to </p> <p class="ilb visible" id="calender"></p> <br/>
+<p class="ilb">The form_redirect.html currently points to </p> <p class="ilb visible" id="form"></p>
+
+<br/>
+
+<a class="visible" href="https://3100-robotics.github.io/recruiting_files/current_year_dates.ics"> current_year_dates.ics: Direct calender data link. 
+    <b> This probably is not what you are looking for, see above</b></a> <br/>
+
+<br/>
+<br/>
+
+<details>
+  <summary class="fairy">Click to expand rationale diagram</summary>
+  <object data="https://3100-robotics.github.io/recruiting_files/diagram.svg" type="image/svg+xml"></object>
+</details>
+
+    <h2><b class="footer">This page was last updated on 9/10/2025.</b></h2>
+</body>
+
+</html>
