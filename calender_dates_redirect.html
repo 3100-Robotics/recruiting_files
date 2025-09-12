@@ -1,16 +1,57 @@
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="/common.js"></script>
     <script>
         function main() {
-            const url = "https://3100-robotics.github.io/recruiting_files/calender_link.txt";
+            const url = "/calender_link.txt";
             fetch(url)
                 .then( r => r.text() )
-                .then( t => window.location.href = t)//window.location.replace(t) )
+                .then(t => window.open(t, "_self"));
+                //.then( t => window.location.href = t) //window.location.replace(t) )
             
+                platform = navigator.userAgent;
+                document.getElementById("yapahol").innerHTML = platform;
+
+                if (/\bCrOS\b/.test(userAgent)) {
+                    document.insertBefore(document.getElementById("yapahol"), htmlToNode("<h1>You are on a Chromebook</h1>"));
+                } else if (/android/i.test(userAgent)) {
+                    document.insertBefore(document.getElementById("yapahol"), htmlToNode("<h1>You are on an Android</h1>"));
+                }
         }
     </script>
+    <style>
+        .bg1 {
+            padding: 5px;
+            border-radius: 20px;
+            background-color: green;
+            display: flex;
+            align-items: center;
+        }
+        .dot {
+            font-size: 30px;
+            color: red;
+        }
+    </style>
 </head>
 
-<body onload="main();"></body>
+<body onload="main();">
+    <h6 id="yapahol"></h6>
+    <h2> If you havent seen a popup telling you to add the <b class="dot">18th and 22th</b> to your calender,
+        common on android/chromeos, you need to import the calender file that was just downloaded. We
+        provide a link to Google Calender's import page. The file will be called
+        <b class="dot">current_year_dates.ics</b>. Sorry for the inconvinence.
+    </h2>
+
+
+    <a href="https://calendar.google.com/calendar/u/0/r/settings/export" target="_blank" class="button1 bg1">
+        <img src="https://ssl.gstatic.com/calendar/images/dynamiclogo_2020q4/calendar_12_2x.png"/>
+        <h1>Open Google Calendar Import Page</h1>
+    </a>
+
+
+
+
+</body>
     
 </html>

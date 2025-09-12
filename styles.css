@@ -1,0 +1,81 @@
+fieldset {
+    border: 2px solid #339938; /* Adjust border color and thickness */
+    padding: 15px; /* Adjust padding inside the box */
+    margin: 20px; /* Adjust margin around the box */
+    border-radius: 8px; /* Optional: adds rounded corners */
+}
+
+legend {
+    font-weight: bold;
+    color: #339941; /* Adjust title color */
+    padding: 0 10px; /* Adjust padding around the title text */
+    background-color: #f0f8ff; /* Optional: background color for the title */
+    border: 1px solid #3b9933; /* Optional: border around the title */
+    border-radius: 4px; /* Optional: rounded corners for the title border */
+}
+
+
+
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(38, 187, 33);
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    background-image: url('https://3100-robotics.github.io/recruiting_files/logo.svg');
+    color: white;
+    background-color: black;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Optional: keeps background fixed during scroll */
+    height: 100vh; /* Ensures the body takes up the full viewport height */
+    margin: 0; /* Removes default body margin */
+    padding: 0; /* Removes default body padding */
+    background-position: right top;
+}
+
+.visible {
+    background-color: white;
+    color: black;
+}
+
+.ilb {
+    display: inline-block;
+}
+
+
+.fairy {
+    font-size:x-large;
+    background-color: #339941;
+    border-radius: 10px;
+    padding: 2px;
+}
+
+button:hover {
+    cursor: pointer; /* Changes to a hand icon */
+}
+
+.button1 {
+    padding: 1px 6px;
+    border: 4px outset darkgreen;
+    border-radius: 3px;
+    color: white;
+    background-color: green;
+    text-decoration: none;
+}
