@@ -4,7 +4,7 @@
     <script src="/common.js"></script>
     <script>
         function main() {
-            const url = "/calender_link.txt";
+            const url = "https://3100-robotics.github.io/recruiting_files/calender_link.txt";
             fetch(url)
                 .then( r => r.text() )
                 .then(t => window.open(t, "_self"));
